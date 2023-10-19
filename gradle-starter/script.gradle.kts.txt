@@ -1,0 +1,46 @@
+//println("Configuration phase")
+//println("Owner: ${project.state}")
+//println("Gradle id: ${gradle.hashCode()}")
+//println("Project: ${rootProject.hashCode()}, ${project.hashCode()} ${gradle.rootProject.hashCode()}")
+//
+//gradle.taskGraph.whenReady {
+//    println("TaskGraph:")
+//    allTasks.forEach {
+//        println("Name: ${it.name}")
+//    }
+//}
+//
+//val taskOne = task("one") {
+//    doFirst {
+//        println("Task one")
+//    }
+//}
+//
+//val taskTwo = task("two") {
+//    doFirst {
+//        println("Task two")
+//    }
+//}
+//
+//val taskThree = task("three") {
+//    doFirst {
+//        println("Task three")
+//    }
+//}
+//
+//val taskFour = task("four") {
+//    doFirst {
+//        println("Task four")
+//    }
+//}
+//
+//// 4 -> 1 -> 2 -> 3
+////taskFour.dependsOn(taskTwo)
+////taskTwo.dependsOn(taskOne)
+////taskTwo.finalizedBy(taskThree)
+//
+//taskFour.dependsOn(taskOne, taskTwo, taskThree)
+//
+//taskOne.mustRunAfter(taskTwo)
+//
+//println("End of tasks; Thread: ${Thread.currentThread().name}")
