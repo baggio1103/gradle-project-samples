@@ -27,3 +27,22 @@ that contains the source code and dependent libraries that are used.
 A sample project that implements a ServletApi and generates a war file for running
 on top of Tomcat. In this project, the build.gradle.kts shows how to write the
 scripts to generate compileOnly classes and copy the war file to tomCat webApps folder.
+
+### [Gradle Multi-project Build Project](https://github.com/baggio1103/gradle-project-samples/tree/main/gradle-multiproject)
+
+![](./img/multi-project.png)
+A sample project that demonstrates the power of gradle multi-project builds. This 
+project implements all the seven projects you can see on the picture 
+and dependencies between each other:
+
+- root - the main root project that configures the whole project
+- common - a subproject that has two subprojects in turn
+- core - a project that stores all the models
+- util - a project that acts as an additional library
+- database - a project that simulates the interaction with a database
+- service - a project that simulates or handles all the business logic
+- web - a project that implements Servlet Api and handles incoming requests
+
+As you can see the projects depend on each other and each project
+has its own build.gradle.kts files that configure all these
+dependencies between projects (/ module)
